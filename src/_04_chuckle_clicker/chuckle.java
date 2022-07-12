@@ -16,46 +16,40 @@ import javax.swing.JPanel;
 
 
 public class chuckle implements ActionListener{
-	JFrame frame = new JFrame();	
-	JButton button = new JButton();
-	JButton button2 = new JButton();
+	JFrame frame; 
+	JPanel panel;
+	JButton button;
+	JButton button2;
+	public chuckle() {
+		frame = new JFrame();
+		panel = new JPanel();
+		button = new JButton();
+
+		button2 = new JButton();
+
+		frame.setVisible(true);
+		frame.add(panel);
+		panel.add(button);
+		panel.add(button2);
+		
+		
+		button.addActionListener(this);
+		button2.addActionListener(this);
+		
+		button.setText("trick");
+		button2.setText("treat");
+		
+		frame.pack();
+
+	}
+public static void main(String[] args) {
 	
-public void main(String[] args) {
-	
-	new chuckle();
-	
-	
-	button.setBounds(10, 0, 95,30);
-	frame.add(button);
-	
-	button2.setBounds(100,0,95,30);
-	frame.add(button2);
-	
-	
-	
-	button.setText("Trick");
-	button.addActionListener(this);
-	
-	button2.setText("Treat");
-	frame.setSize(250,200);
-	frame.setLayout(null);
-	frame.setVisible(true);
-	
+chuckle c = new chuckle();
 	
 }
 
 
-public void actionPerformed(ActionEvent arg0) {
-	JButton buttonPressed = (JButton) arg0.getSource();
-	
 
-if (buttonPressed == button ) {
-System.out.println("button1 clicked");
-}
-if (buttonPressed == button2) {
- System.out.println("button2 clicked");
-}
-}
 
 
 
@@ -71,6 +65,15 @@ private void showPictureFromTheInternet(String imageUrl) {
     } catch (MalformedURLException e) {
         e.printStackTrace();
     }
+}
+@Override
+public void actionPerformed(ActionEvent arg0) {
+	if (arg0.getSource() == button) {
+	
+	} 
+	if (arg0.getSource() == button2) {
+		showPictureFromTheInternet("https://allhdwallpapers.com/wp-content/uploads/2016/07/Chocolate-7.jpg");
+	} 
 }
 
 }
