@@ -31,7 +31,7 @@ JFrame frame = new JFrame();
 		// 6. create a variable of type "JLabel" but don’t initialize it yet
 		JLabel label;
 		// 7. use the "loadImage..." methods below to initialize your JLabel
-		label = loadImageFromComputer(fileName)
+		//label = loadImageFromComputer(fileName)
 		// 8. add your JLabel to the frame
 		// 9. call the pack() method on the frame
 		// 10. add a mouse listener to your frame (hint: use *this*)
