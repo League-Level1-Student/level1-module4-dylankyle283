@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Random;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -41,6 +42,16 @@ public class LightsOut implements MouseListener {
 			
 			label.setText(number);
 			label.setBackground(Color.LIGHT_GRAY);
+			
+			int rand = new Random().nextInt(5);
+			int count = 0;
+			
+			System.out.println(rand);
+			
+			if ( rand == 1 & count <3) {
+				label.setBackground(Color.WHITE);
+				count ++;
+			}
 			label.setOpaque(true);
 			label.addMouseListener(this);
 			
@@ -106,6 +117,13 @@ if (hasWon == true) {
 }
 		/** PART 3: RANDOMIZE YOUR BOARD **/
 		// Now that your game works can you make the game start with some lights on?
+
+
+
+
+
+
+
 
 	}
 
