@@ -59,6 +59,8 @@ public class LightsOut implements MouseListener {
 			gamePanel.add(label);
 		}
 		
+	
+		
 		
 		
 		
